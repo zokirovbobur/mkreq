@@ -36,7 +36,7 @@ public class WebUrlService {
                 e.printStackTrace();
             }
 
-            res= "url added successfully";
+            res= "url with id "+webUrl.getId()+" added successfully";
         }
 
 

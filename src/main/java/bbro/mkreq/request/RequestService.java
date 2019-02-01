@@ -84,7 +84,9 @@ public class RequestService {
                         //Main work for request--------------------------------------------------
                         String result = restTemplate.getForObject(uri, String.class);
                         System.out.println("before save id: "+ webUrl.getId());
-                        webUrlService.saveUrl(webUrl);
+
+                        System.out.println(webUrlService.saveUrl(webUrl));
+
 
                         System.out.println(result);
 
@@ -102,11 +104,11 @@ public class RequestService {
                         e.printStackTrace();
                     }
                 }
-
+                webUrlService.deleteUrl(webUrl);
 
 
             }).start();
-            webUrlService.deleteUrl(webUrl);
+
 
         }
     }
